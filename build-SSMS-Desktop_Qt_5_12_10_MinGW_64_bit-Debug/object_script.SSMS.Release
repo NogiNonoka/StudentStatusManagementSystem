@@ -1,0 +1,15 @@
+release/add_student_widget.o
+release/browser_widget.o
+release/course_widget.o
+release/main.o
+release/main_widget.o
+release/menu_widget.o
+release/modify_widget.o
+release/search_widget.o
+release/moc_add_student_widget.o
+release/moc_browser_widget.o
+release/moc_course_widget.o
+release/moc_main_widget.o
+release/moc_menu_widget.o
+release/moc_modify_widget.o
+release/moc_search_widget.o
