@@ -28,9 +28,19 @@ Semester 3 C++ Project
 
 #### 开发指导 Guide
 
+##### 文件名 File name
+
+-   `.h` `.cpp` 文件同名
+-   使用连字符；
+
 ##### 头文件 Header Files
+
+-   头文件保护；
 
 ##### 变量名 Variables' Name
 
+-   驼峰命名法；
+
 ##### 注释 Conments
 
+-   行注释或块注释；
