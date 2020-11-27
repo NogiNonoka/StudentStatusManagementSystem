@@ -7,23 +7,23 @@ MainWidget::MainWidget(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    asw = new AddStudentWidget;
-    bw = new BrowserWidget;
-    cw = new CourseWidget;
-    menu = new MenuWidget;
-    mw = new ModifyWidget;
-    sw = new SearchWidget;
+    addStudentWidget = new AddStudentWidget;
+    broswerWidget = new BrowserWidget;
+    courseWidget = new CourseWidget;
+    menuWidget = new MenuWidget;
+    modifyWidget = new ModifyWidget;
+    searchWidget = new SearchWidget;
 
-    qsl = new QStackedLayout;
+    qStackedLayout = new QStackedLayout;
 
-    qsl->addWidget(asw);
-    qsl->addWidget(bw);
-    qsl->addWidget(cw);
-    qsl->addWidget(menu);
-    qsl->addWidget(mw);
-    qsl->addWidget(sw);
+    qStackedLayout->addWidget(addStudentWidget);
+    qStackedLayout->addWidget(broswerWidget);
+    qStackedLayout->addWidget(courseWidget);
+    qStackedLayout->addWidget(menuWidget);
+    qStackedLayout->addWidget(modifyWidget);
+    qStackedLayout->addWidget(searchWidget);
 
-    setLayout(qsl);
+    setLayout(qStackedLayout);
 }
 
 MainWidget::~MainWidget()
