@@ -12,3 +12,8 @@ CourseWidget::~CourseWidget()
 {
     delete ui;
 }
+
+void CourseWidget::on_returnButton_clicked()
+{
+    emit display(0);
+}

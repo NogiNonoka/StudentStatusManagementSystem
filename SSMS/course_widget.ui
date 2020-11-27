@@ -1,9 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>CourseWidget</class>
- <widget name="CourseWidget" class="QWidget">
+ <widget class="QWidget" name="CourseWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -15,7 +13,113 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <widget class="QPushButton" name="returnButton">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>250</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>返回</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="widgetLabel">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>70</y>
+     <width>80</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Agency FB</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>课程信息</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>120</y>
+     <width>241</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="courseLabel">
+        <property name="text">
+         <string>课程</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="averageLabel">
+        <property name="text">
+         <string>均分</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="passLabel">
+        <property name="text">
+         <string>及格率</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QComboBox" name="courseBox">
+        <item>
+         <property name="text">
+          <string>默认</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>高等数学</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>程序设计</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="getAverageLabel">
+        <property name="text">
+         <string>NULL</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="getPassLabel">
+        <property name="text">
+         <string>NULL</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
  </widget>
- <pixmapfunction/>
+ <resources/>
  <connections/>
 </ui>

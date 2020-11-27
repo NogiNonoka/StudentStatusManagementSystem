@@ -17,6 +17,12 @@ public:
 
 private:
     Ui::AddStudentWidget *ui;
+
+private slots:
+    void on_returnButton_clicked();
+
+signals:
+    void display(int number);
 };
 
 #endif // ADD_STUDENT_WIDGET_H

@@ -12,3 +12,8 @@ AddStudentWidget::~AddStudentWidget()
 {
     delete ui;
 }
+
+void AddStudentWidget::on_returnButton_clicked()
+{
+    emit display(0);
+}

@@ -12,3 +12,8 @@ BrowserWidget::~BrowserWidget()
 {
     delete ui;
 }
+
+void BrowserWidget::on_returnButton_clicked()
+{
+    emit display(0);
+}

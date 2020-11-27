@@ -17,6 +17,17 @@ public:
 
 private:
     Ui::MenuWidget *ui;
+
+private slots:
+
+    void on_addButton_clicked();
+    void on_browserButton_clicked();
+    void on_courseButton_clicked();
+    void on_exitButton_clicked();
+    void on_searchButton_clicked();
+
+signals:
+    void display(int number);
 };
 
 #endif // MENU_WIDGET_H

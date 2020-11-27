@@ -17,6 +17,12 @@ public:
 
 private:
     Ui::BrowserWidget *ui;
+
+private slots:
+    void on_returnButton_clicked();
+
+signals:
+    void display(int number);
 };
 
 #endif // BROWSER_WIDGET_H

@@ -23,17 +23,16 @@ public:
     explicit MainWidget(QWidget *parent = nullptr);
     ~MainWidget();
 
+private:
+    Ui::MainWidget *ui;
+
     AddStudentWidget *addStudentWidget;
     BrowserWidget *broswerWidget;
     CourseWidget *courseWidget;
     MenuWidget *menuWidget;
-    ModifyWidget *modifyWidget;
     SearchWidget *searchWidget;
 
     QStackedLayout *qStackedLayout;
-
-private:
-    Ui::MainWidget *ui;
 };
 
 #endif // MAIN_WIDGET_H

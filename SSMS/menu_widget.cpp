@@ -12,3 +12,29 @@ MenuWidget::~MenuWidget()
 {
     delete ui;
 }
+
+void MenuWidget::on_addButton_clicked()
+{
+    emit display(1);
+}
+
+
+void MenuWidget::on_browserButton_clicked()
+{
+    emit display(2);
+}
+
+void MenuWidget::on_courseButton_clicked()
+{
+    emit display(3);
+}
+
+void MenuWidget::on_searchButton_clicked()
+{
+    emit display(4);
+}
+
+void MenuWidget::on_exitButton_clicked()
+{
+    emit QApplication::exit();
+}

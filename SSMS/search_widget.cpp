@@ -12,3 +12,8 @@ SearchWidget::~SearchWidget()
 {
     delete ui;
 }
+
+void SearchWidget::on_returnButton_clicked()
+{
+    emit display(0);
+}
