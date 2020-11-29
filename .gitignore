@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+# Compiled File Folders
+/build-SSMS-Desktop_Qt_5_12_10_MinGW_64_bit-Debug/*
+/build-SSMS-Desktop_Qt_5_12_10_MinGW_64_bit-Profile/*
+/build-SSMS-Desktop_Qt_5_12_10_MinGW_64_bit-Release/*
