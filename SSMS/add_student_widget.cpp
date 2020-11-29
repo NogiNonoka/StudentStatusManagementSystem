@@ -18,6 +18,40 @@ void AddStudentWidget::on_returnButton_clicked()
     emit display(0);
 }
 
+bool checkID(const QString &newID)
+{
+    for (int i = 0; i < newID.length(); ++i)
+    {
+        if (newID[i] <= '0' || newID >= '9')
+        {
+             QMessageBox::about(NULL, "错误", "学号应为纯数字。");
+             return false;
+        }
+    }
+    QFile file("StudentStatus.txt");
+    file.open(QIODevice::ReadOnly|QIODevice::Text);
+    if(!file.isOpen())
+    {
+        QMessageBox::about(nullptr, "错误", "数据文件检查失败");
+        return false;
+    }
+    QTextStream inp(&file);
+    while(!inp.atEnd())
+    {
+        QString id, name, sex;
+        double math, cprogram;
+        inp >> id >> name >> sex >> math >> cprogram;
+        if (newID == id)
+        {
+            QMessageBox::about(NULL, "错误", "数据文件已包含该学员，请去查询页面修改信息。");
+            file.close();
+            return false;
+        }
+    }
+    file.close();
+    return true;
+}
+
 void AddStudentWidget::on_addButton_clicked()
 {
     if (ui->nameEdit->text() == ""
@@ -34,6 +68,8 @@ void AddStudentWidget::on_addButton_clicked()
     QString sex = ui->sexEdit->text();
     double math = ui->mathEdit->text().toDouble();
     double cprogram = ui->cProgramEdit->text().toDouble();
+    if (!checkID(id))
+        return;
     if (sex != "男" && sex != "女")
     {
         QMessageBox::about(nullptr, "错误", "性别有效值为：男/女。");
@@ -52,7 +88,7 @@ void AddStudentWidget::on_addButton_clicked()
         return;
     }
     QTextStream out(&file);
-    out << name << " " <<  id << " " << sex << " " << math << " " << cprogram << endl;
+    out << id << " " <<  name << " " << sex << " " << math << " " << cprogram << endl;
     file.close();
     QMessageBox::about(NULL, "反馈", "学生信息添加成功。");
     ui->nameEdit->clear();

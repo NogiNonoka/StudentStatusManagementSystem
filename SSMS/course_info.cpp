@@ -2,7 +2,6 @@
 
 CourseInfo::CourseInfo()
 {
-//    this->uid_ = ++courseCnt;
     this->courseName_ = "";
     this->sum_ = 0.0;
     this->average_ = 0.0;
@@ -11,9 +10,8 @@ CourseInfo::CourseInfo()
     this->passRatio_ = 0.0;
 }
 
-CourseInfo::CourseInfo(QString &courseName)
+CourseInfo::CourseInfo(const QString &courseName)
 {
-//    this->uid_ = ++courseCnt;
     this->courseName_ = courseName;
     this->sum_ = 0.0;
     this->average_ = 0.0;
@@ -27,7 +25,7 @@ double CourseInfo::GetSum(){return this->sum_;}
 double CourseInfo::GetAverage(){return this->average_;}
 double CourseInfo::GetPassRatio(){return this->passRatio_;}
 
-void CourseInfo::SetCourseName(QString &courseName){this->courseName_ = courseName;}
+void CourseInfo::SetCourseName(const QString &courseName){this->courseName_ = courseName;}
 void CourseInfo::AddCourseScore(double newScore)
 {
     this->sum_ += newScore;
@@ -39,6 +37,14 @@ void CourseInfo::AddCourseScore(double newScore)
 
 void CourseInfo::CalcValue()
 {
-    this->passRatio_ = this->passNumber_ / this->totalNumber_;
-    this->average_ = this->sum_ / this->totalNumber_;
+    if (this->totalNumber_ > 0)
+    {
+        this->passRatio_ = 1.0 * this->passNumber_ / this->totalNumber_;
+        this->average_ = 1.0 * this->sum_ / this->totalNumber_;
+    }
+    else
+    {
+        this->passRatio_ = 0.0;
+        this->average_ = 0.0;
+    }
 }

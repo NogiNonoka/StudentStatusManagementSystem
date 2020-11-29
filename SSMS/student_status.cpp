@@ -2,31 +2,28 @@
 
 StudentStatus::StudentStatus()
 {
-//    this->uid_ = ++studentCnt;
     this->id_ = "";
     this->name_ = "";
     this->sex_ = "";
-    this->class_ = 0;
     this->math_ = 0;
     this->cProgram_ = 0;
+    CalcValue();
 }
 
 
-StudentStatus::StudentStatus(const QString &id, const QString &name, const QString &sex, int cls, double math, double cprogram)
+StudentStatus::StudentStatus(const QString &id, const QString &name, const QString &sex, double math, double cprogram)
 {
-//    this->uid_ = ++studentCnt;
     this->id_ = id;
     this->name_ = name;
     this->sex_ = sex;
-    this->class_ = cls;
     this->math_ = math;
     this->cProgram_ = cprogram;
+    CalcValue();
 }
 
 QString StudentStatus::GetID(){return this->id_;}
 QString StudentStatus::GetName(){return this->name_;}
 QString StudentStatus::GetSex(){return this->sex_;}
-int StudentStatus::GetClass(){return this->class_;}
 double StudentStatus::GetMath(){return this->math_;}
 double StudentStatus::GetCProgram(){return this->cProgram_;}
 double StudentStatus::GetSum(){return this->sum_;}

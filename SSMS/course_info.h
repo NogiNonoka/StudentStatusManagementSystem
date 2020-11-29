@@ -7,16 +7,14 @@ class CourseInfo
 {
 public:
     CourseInfo();
-    CourseInfo(QString &courseName);
-
-//    static int courseCnt;
+    CourseInfo(const QString &courseName);
 
     QString GetCourseName();
     double GetSum();
     double GetAverage();
     double GetPassRatio();
 
-    void SetCourseName(QString &courseName);
+    void SetCourseName(const QString &courseName);
     void AddCourseScore(double newScore);
 
 private:

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="returnButton">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>250</y>
+     <x>700</x>
+     <y>550</y>
      <width>80</width>
      <height>24</height>
     </rect>
@@ -26,61 +26,10 @@
     <string>返回</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>60</y>
-     <width>321</width>
-     <height>181</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_2">
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QRadioButton" name="idRadio">
-          <property name="text">
-           <string>学号</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QRadioButton" name="sumRadio">
-          <property name="text">
-           <string>总分</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QRadioButton" name="mathRadio">
-          <property name="text">
-           <string>高等数学</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QRadioButton" name="cProgramRadio">
-          <property name="text">
-           <string>程序设计</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <widget class="QTableWidget" name="browserTable"/>
-      </item>
-     </layout>
-    </item>
-   </layout>
-  </widget>
   <widget class="QLabel" name="widgetLabel">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>340</x>
      <y>20</y>
      <width>120</width>
      <height>23</height>
@@ -95,6 +44,89 @@
    <property name="text">
     <string>浏览学生信息</string>
    </property>
+  </widget>
+  <widget class="QTableWidget" name="statusTable">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>761</width>
+     <height>461</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>50</y>
+     <width>250</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QComboBox" name="modeBox">
+      <item>
+       <property name="text">
+        <string>默认</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>学号</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>姓名</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>总分</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>高等数学</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>程序设计</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="typeBox">
+      <item>
+       <property name="text">
+        <string>升序</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>降序</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="sortButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>排序</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

@@ -2,6 +2,12 @@
 #define BROWSER_WIDGET_H
 
 #include <QWidget>
+#include <QFile>
+#include <QMessageBox>
+#include <QDebug>
+
+
+#include "student_status.h"
 
 namespace Ui {
 class BrowserWidget;
@@ -20,6 +26,8 @@ private:
 
 private slots:
     void on_returnButton_clicked();
+
+    void on_sortButton_clicked();
 
 signals:
     void display(int number);
