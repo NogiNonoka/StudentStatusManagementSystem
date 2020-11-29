@@ -1,5 +1,6 @@
 release/add_student_widget.o
 release/browser_widget.o
+release/course_info.o
 release/course_widget.o
 release/main.o
 release/main_widget.o

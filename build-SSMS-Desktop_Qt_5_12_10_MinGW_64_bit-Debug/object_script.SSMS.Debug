@@ -1,5 +1,6 @@
 debug/add_student_widget.o
 debug/browser_widget.o
+debug/course_info.o
 debug/course_widget.o
 debug/main.o
 debug/main_widget.o

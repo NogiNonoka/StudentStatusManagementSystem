@@ -1,5 +1,6 @@
-#ifndef STUDENT_STATUS_H
-#define STUDENT_STATUS_H
+#ifndef STUDENTSTATUS_H
+#define STUDENTSTATUS_H
+
 
 #include <QString>
 
@@ -7,21 +8,22 @@ class StudentStatus
 {
 public:
     StudentStatus();
-    StudentStatus(QString &id, QString &name, QString &sex, int &cls, double &math, double &cprogram);
+    StudentStatus(const QString &id, const QString &name, const QString &sex, int cls, double math, double cprogram);
 //                : id_(id), name_(name), sex_(sex), class_(cls), math_(math), cProgram_(cprogram)
 
-    static int StudentCnt;
+//    static int studentCnt;
 
     QString GetID();
     QString GetName();
     QString GetSex();
     int GetClass();
-    int GetMath();
-    int GetCProgram();
+    double GetMath();
+    double GetCProgram();
+    double GetSum();
 
-    void SetID(QString id);
-    void SetName(QString name);
-    void SetSex(QString sex);
+    void SetID(const QString &id);
+    void SetName(const QString &name);
+    void SetSex(const QString &sex);
     void SetClass(int cls);
     void SetMath(double math);
     void SetCProgram(double cprogram);
@@ -37,7 +39,6 @@ private:
     double average_;
     double sum_;
 
-    void Calc();
+    void CalcValue();
 };
-
-#endif // STUDENT_STATUS_H
+#endif // STUDENTSTATUS_H
