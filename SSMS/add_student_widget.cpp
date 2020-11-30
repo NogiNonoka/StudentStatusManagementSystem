@@ -18,7 +18,7 @@ void AddStudentWidget::on_returnButton_clicked()
     emit display(0);
 }
 
-bool checkID(const QString &newID)
+bool checkID(const int courseCnt, const QString &newID)
 {
     for (int i = 0; i < newID.length(); ++i)
     {
@@ -41,8 +41,12 @@ bool checkID(const QString &newID)
     while(!inp.atEnd())
     {
         QString id, name, sex;
-        double math, cprogram;
-        inp >> id >> name >> sex >> math >> cprogram;
+        inp >> id >> name >> sex;
+        for (int i = 0; i < courseCnt; ++i)
+        {
+            double tmp;
+            inp >> tmp;
+        }
         if (newID == id)
         {
             QMessageBox::about(NULL, "错误", "数据文件已包含该学员，请去查询页面修改信息。");
@@ -65,22 +69,27 @@ void AddStudentWidget::on_addButton_clicked()
         QMessageBox::about(nullptr, "错误", "信息不完全。");
         return;
     }
+    const int courseCnt = 2;
     QString name = ui->nameEdit->text();
     QString id = ui->idEdit->text();
     QString sex = ui->sexEdit->text();
-    double math = ui->mathEdit->text().toDouble();
-    double cprogram = ui->cProgramEdit->text().toDouble();
-    if (!checkID(id))
+    double score[courseCnt];
+    score[0] = ui->mathEdit->text().toDouble();
+    score[1] = ui->cProgramEdit->text().toDouble();
+    if (!checkID(courseCnt, id))
         return;
     if (sex != "男" && sex != "女")
     {
         QMessageBox::about(nullptr, "错误", "性别有效值为：男/女。");
         return;
     }
-    if (math < 0 || math > 100 || cprogram < 0 || cprogram > 100)
+    for (int i = 0; i < courseCnt; ++i)
     {
-        QMessageBox::about(nullptr, "错误", "成绩有效区间为：[0, 100]。");
-        return;
+        if (score[i] < 0.0 || score[i] > 100.0)
+        {
+            QMessageBox::about(nullptr, "错误", "成绩有效区间为：[0, 100]。");
+            return;
+        }
     }
     QFile file("StudentStatus.txt");
     file.open(QIODevice::WriteOnly|QIODevice::Text|QIODevice::Append);
@@ -90,7 +99,12 @@ void AddStudentWidget::on_addButton_clicked()
         return;
     }
     QTextStream out(&file);
-    out << id << " " <<  name << " " << sex << " " << math << " " << cprogram << endl;
+    out << id << " " <<  name << " " << sex;
+    for (int i = 0; i < courseCnt; ++i)
+    {
+        out << " " << score[i];
+    }
+    out << endl;
     file.close();
     QMessageBox::about(NULL, "反馈", "学生信息添加成功。");
     ui->nameEdit->clear();
