@@ -19,7 +19,6 @@ private:
     Ui::SearchWidget *ui;
 
 private slots:
-
     void on_returnButton_clicked();
 
 signals:

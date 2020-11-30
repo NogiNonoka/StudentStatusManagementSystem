@@ -10,6 +10,7 @@
 #include "menu_widget.h"
 #include "modify_widget.h"
 #include "search_widget.h"
+#include "system_settings_widget.h"
 
 namespace Ui {
 class MainWidget;
@@ -31,6 +32,8 @@ private:
     CourseWidget *courseWidget;
     MenuWidget *menuWidget;
     SearchWidget *searchWidget;
+    SystemSettingsWidget *settingsWidget;
+
 
     QStackedLayout *qStackedLayout;
 };

@@ -12,13 +12,14 @@ public:
     QString GetCourseName();
     double GetSum();
     double GetAverage();
+    int GetTotalNumber();
+    int GetPassNumber();
     double GetPassRatio();
 
     void SetCourseName(const QString &courseName);
     void AddCourseScore(double newScore);
 
 private:
-    int uid_;
     QString courseName_;
     double sum_;
     double average_;

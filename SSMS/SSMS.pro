@@ -4,7 +4,8 @@ FORMS += \
     course_widget.ui \
     main_widget.ui \
     menu_widget.ui \
-    search_widget.ui
+    search_widget.ui \
+    system_settings_widget.ui
 
 HEADERS += \
     add_student_widget.h \
@@ -14,7 +15,8 @@ HEADERS += \
     main_widget.h \
     menu_widget.h \
     search_widget.h \
-    student_status.h
+    student_status.h \
+    system_settings_widget.h
 
 SOURCES += \
     add_student_widget.cpp \
@@ -25,7 +27,8 @@ SOURCES += \
     main_widget.cpp \
     menu_widget.cpp \
     search_widget.cpp \
-    student_status.cpp
+    student_status.cpp \
+    system_settings_widget.cpp
 
 QT += \
     widgets

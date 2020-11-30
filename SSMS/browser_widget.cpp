@@ -55,6 +55,7 @@ bool cmp_cprogram(StudentStatus &a, StudentStatus &b){return a.GetCProgram() < b
 void BrowserWidget::on_sortButton_clicked()
 {
     ui->statusTable->clearContents();
+    ui->statusTable->setRowCount(0);
     QVector<StudentStatus> statusArray;
     if (!InputStudentStatus(statusArray))
         return;
@@ -88,4 +89,11 @@ void BrowserWidget::on_sortButton_clicked()
         ui->statusTable->setItem(i, 4, new QTableWidgetItem(QString::number(statusArray[i].GetMath())));
         ui->statusTable->setItem(i, 5, new QTableWidgetItem(QString::number(statusArray[i].GetCProgram())));
     }
+}
+
+void BrowserWidget::on_clearButton_clicked()
+{
+    QFile file("StudentStatus.txt");
+    file.remove();
+    file.close();
 }

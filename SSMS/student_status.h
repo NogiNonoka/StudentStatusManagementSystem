@@ -2,6 +2,7 @@
 #define STUDENTSTATUS_H
 
 #include <QString>
+#include <QPair>
 
 class StudentStatus
 {
@@ -23,7 +24,6 @@ public:
     void SetCProgram(double cprogram);
 
 private:
-    int uid_;
     QString id_;
     QString name_;
     QString sex_;
@@ -31,6 +31,8 @@ private:
     double cProgram_;
     double average_;
     double sum_;
+
+//    QVector<QPair<QString, double> > course_;
 
     void CalcValue();
 };

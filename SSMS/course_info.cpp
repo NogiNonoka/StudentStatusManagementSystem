@@ -23,6 +23,8 @@ CourseInfo::CourseInfo(const QString &courseName)
 QString CourseInfo::GetCourseName(){return this->courseName_;}
 double CourseInfo::GetSum(){return this->sum_;}
 double CourseInfo::GetAverage(){return this->average_;}
+int CourseInfo::GetTotalNumber(){return this->totalNumber_;}
+int CourseInfo::GetPassNumber(){return this->passNumber_;}
 double CourseInfo::GetPassRatio(){return this->passRatio_;}
 
 void CourseInfo::SetCourseName(const QString &courseName){this->courseName_ = courseName;}

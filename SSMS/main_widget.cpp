@@ -13,6 +13,7 @@ MainWidget::MainWidget(QWidget *parent) :
     broswerWidget = new BrowserWidget;
     courseWidget = new CourseWidget;
     searchWidget = new SearchWidget;
+    settingsWidget = new SystemSettingsWidget;
 
     qStackedLayout = new QStackedLayout;
 
@@ -22,6 +23,7 @@ MainWidget::MainWidget(QWidget *parent) :
     qStackedLayout->addWidget(broswerWidget);
     qStackedLayout->addWidget(courseWidget);
     qStackedLayout->addWidget(searchWidget);
+    qStackedLayout->addWidget(settingsWidget);
 
     setLayout(qStackedLayout);
 
@@ -30,6 +32,7 @@ MainWidget::MainWidget(QWidget *parent) :
     connect(courseWidget, &CourseWidget::display, qStackedLayout, &QStackedLayout::setCurrentIndex);
     connect(menuWidget, &MenuWidget::display, qStackedLayout, &QStackedLayout::setCurrentIndex);
     connect(searchWidget, &SearchWidget::display, qStackedLayout, &QStackedLayout::setCurrentIndex);
+    connect(settingsWidget, &SystemSettingsWidget::display, qStackedLayout, &QStackedLayout::setCurrentIndex);
 }
 
 MainWidget::~MainWidget()

@@ -24,9 +24,7 @@ private:
     Ui::CourseWidget *ui;
 
 private slots:
-
     void on_returnButton_clicked();
-
     void on_courseBox_currentTextChanged(const QString &arg1);
 
 signals:

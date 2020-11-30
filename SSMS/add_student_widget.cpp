@@ -22,13 +22,15 @@ bool checkID(const QString &newID)
 {
     for (int i = 0; i < newID.length(); ++i)
     {
-        if (newID[i] <= '0' || newID >= '9')
+        if (newID[i] < '0' || newID > '9')
         {
              QMessageBox::about(NULL, "错误", "学号应为纯数字。");
              return false;
         }
     }
     QFile file("StudentStatus.txt");
+    file.open(QIODevice::WriteOnly|QIODevice::Text);
+    file.close();
     file.open(QIODevice::ReadOnly|QIODevice::Text);
     if(!file.isOpen())
     {
@@ -77,7 +79,7 @@ void AddStudentWidget::on_addButton_clicked()
     }
     if (math < 0 || math > 100 || cprogram < 0 || cprogram > 100)
     {
-        QMessageBox::about(nullptr, "错误", "成绩有效区间区间为：[1, 100]。");
+        QMessageBox::about(nullptr, "错误", "成绩有效区间为：[0, 100]。");
         return;
     }
     QFile file("StudentStatus.txt");

@@ -6,7 +6,6 @@
 #include <QMessageBox>
 #include <QDebug>
 
-
 #include "student_status.h"
 
 namespace Ui {
@@ -26,8 +25,8 @@ private:
 
 private slots:
     void on_returnButton_clicked();
-
     void on_sortButton_clicked();
+    void on_clearButton_clicked();
 
 signals:
     void display(int number);

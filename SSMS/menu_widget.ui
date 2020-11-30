@@ -16,10 +16,10 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>340</x>
      <y>220</y>
      <width>131</width>
-     <height>191</height>
+     <height>211</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -52,6 +52,13 @@
      </widget>
     </item>
     <item>
+     <widget class="QPushButton" name="settingsButton">
+      <property name="text">
+       <string>系统配置</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QPushButton" name="exitButton">
       <property name="text">
        <string>退出</string>
@@ -63,7 +70,7 @@
   <widget class="QLabel" name="widgetLabel">
    <property name="geometry">
     <rect>
-     <x>360</x>
+     <x>370</x>
      <y>180</y>
      <width>79</width>
      <height>23</height>
@@ -82,10 +89,10 @@
   <widget class="QLabel" name="systemName">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>320</x>
      <y>140</y>
-     <width>216</width>
-     <height>31</height>
+     <width>168</width>
+     <height>24</height>
     </rect>
    </property>
    <property name="font">

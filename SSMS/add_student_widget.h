@@ -23,9 +23,7 @@ private:
 
 private slots:
     void on_returnButton_clicked();
-
     void on_addButton_clicked();
-
     void on_clearButton_clicked();
 
 signals:

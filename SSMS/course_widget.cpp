@@ -68,6 +68,7 @@ void CourseWidget::on_courseBox_currentTextChanged(const QString &arg1)
     {
         ui->getAverageLabel->setText("NULL");
         ui->getPassRatioLabel->setText("NULL");
+        return;
     }
     int courseCnt = 2;
     QVector<QString> courseName;
