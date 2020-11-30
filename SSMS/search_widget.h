@@ -2,6 +2,9 @@
 #define SEARCH_WIDGET_H
 
 #include <QWidget>
+#include <QMessageBox>
+#include <QFile>
+#include <QDebug>
 
 namespace Ui {
 class SearchWidget;
@@ -20,6 +23,10 @@ private:
 
 private slots:
     void on_returnButton_clicked();
+    void on_searchButton_clicked();
+    void on_deleteButton_clicked();
+
+    void on_modifyButton_clicked();
 
 signals:
     void display(int number);

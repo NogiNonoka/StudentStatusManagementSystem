@@ -54,7 +54,7 @@
     <item>
      <widget class="QPushButton" name="settingsButton">
       <property name="text">
-       <string>系统配置</string>
+       <string>系统信息</string>
       </property>
      </widget>
     </item>

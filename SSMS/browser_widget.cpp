@@ -30,7 +30,7 @@ bool InputStudentStatus(QVector<StudentStatus> &statusArray)
     file.open(QIODevice::ReadOnly|QIODevice::Text);
     if(!file.isOpen())
     {
-        QMessageBox::about(nullptr, "反馈", "数据文件打开失败");
+        QMessageBox::about(nullptr, "错误", "数据文件打开失败。");
         return false;
     }
     QTextStream inp(&file);
@@ -61,7 +61,7 @@ void BrowserWidget::on_sortButton_clicked()
         return;
     if (statusArray.size() == 0)
     {
-        QMessageBox::about(nullptr, "反馈", "学生信息为空");
+        QMessageBox::about(nullptr, "反馈", "数据文件为空。");
         return;
     }
 
@@ -95,5 +95,12 @@ void BrowserWidget::on_clearButton_clicked()
 {
     QFile file("StudentStatus.txt");
     file.remove();
+    file.close();
+    file.open(QIODevice::WriteOnly|QIODevice::Text);
+    if(!file.isOpen())
+    {
+        QMessageBox::about(NULL, "错误", "新建数据文件失败。");
+        return;
+    }
     file.close();
 }

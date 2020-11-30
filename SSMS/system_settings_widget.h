@@ -2,6 +2,8 @@
 #define SYSTEM_SETTINGS_WIDGET_H
 
 #include <QWidget>
+#include <QMessageBox>
+#include <QFile>
 
 namespace Ui {
 class SystemSettingsWidget;
@@ -21,6 +23,7 @@ private:
 private slots:
 
     void on_returnButton_clicked();
+    void on_initButton_clicked();
 
 signals:
     void display(int number);
