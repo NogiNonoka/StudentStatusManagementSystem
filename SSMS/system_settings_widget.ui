@@ -19,20 +19,20 @@
      <x>700</x>
      <y>560</y>
      <width>80</width>
-     <height>20</height>
+     <height>24</height>
     </rect>
    </property>
    <property name="text">
     <string>返回</string>
    </property>
   </widget>
-  <widget class="QLabel" name="title">
+  <widget class="QLabel" name="courseNumLabel">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>250</x>
      <y>110</y>
-     <width>239</width>
-     <height>24</height>
+     <width>307</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -48,36 +48,23 @@
   <widget class="QLabel" name="author">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>340</x>
      <y>150</y>
-     <width>102</width>
-     <height>12</height>
+     <width>128</width>
+     <height>15</height>
     </rect>
    </property>
    <property name="text">
     <string>Author:NogiNonoka</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="initButton">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>250</y>
-     <width>110</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>初始化数据库</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
+     <x>230</x>
      <y>190</y>
-     <width>290</width>
-     <height>44</height>
+     <width>362</width>
+     <height>55</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -104,6 +91,41 @@
       </property>
       <property name="text">
        <string>支持维护高等数学、程序设计课程信息；</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>280</y>
+     <width>337</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="courseLabel">
+      <property name="font">
+       <font>
+        <family>Agency FB</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>课程数量</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="initEdit"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="initButton">
+      <property name="text">
+       <string>初始化数据库</string>
       </property>
      </widget>
     </item>

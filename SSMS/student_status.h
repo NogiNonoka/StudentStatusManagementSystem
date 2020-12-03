@@ -4,24 +4,29 @@
 #include <QString>
 #include <QPair>
 
+#include "course_info.h"
+
 class StudentStatus
 {
 public:
     StudentStatus();
-    StudentStatus(const QString &id, const QString &name, const QString &sex, double math, double cprogram);
+    StudentStatus(const QString &id, const QString &name, const QString &sex, double math, double cprogram); // refact
 
     QString GetID();
     QString GetName();
     QString GetSex();
-    double GetMath();
-    double GetCProgram();
+    double GetMath(); //abort
+    double GetCProgram(); // abort
     double GetSum();
+    bool GetCourseScore(const QString &courseName, double &courseScore);
 
     void SetID(const QString &id);
     void SetName(const QString &name);
     void SetSex(const QString &sex);
-    void SetMath(double math);
-    void SetCProgram(double cprogram);
+    void SetMath(double math); // abort
+    void SetCProgram(double cprogram); // abort
+    void SetCourseScore(const QVector<QPair<QString, double>> &courseScore);
+    void AddCourseScore(const QString &courseName, const double courseScore);
 
 private:
     QString id_;
@@ -32,8 +37,8 @@ private:
     double average_;
     double sum_;
 
-//    QVector<QPair<QString, double> > course_;
+    QVector<QPair<QString, double> > coursescore_;
 
-    void CalcValue();
+    void CalcValue(); //refact
 };
 #endif // STUDENTSTATUS_H

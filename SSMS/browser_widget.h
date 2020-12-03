@@ -6,6 +6,7 @@
 #include <QMessageBox>
 #include <QDebug>
 
+#include "course_info.h"
 #include "student_status.h"
 
 namespace Ui {

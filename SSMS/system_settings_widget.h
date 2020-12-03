@@ -4,6 +4,9 @@
 #include <QWidget>
 #include <QMessageBox>
 #include <QFile>
+#include <QString>
+
+#include "course_info.h"
 
 namespace Ui {
 class SystemSettingsWidget;

@@ -6,6 +6,8 @@
 #include <QMessageBox>
 #include <QDebug>
 
+#include "course_info.h"
+
 namespace Ui {
 class AddStudentWidget;
 }

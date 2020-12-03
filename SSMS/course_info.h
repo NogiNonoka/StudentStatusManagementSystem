@@ -2,12 +2,16 @@
 #define COURSEINFO_H
 
 #include <QString>
+#include <QVector>
 
 class CourseInfo
 {
 public:
     CourseInfo();
     CourseInfo(const QString &courseName);
+
+    static int courseCnt;
+    static QVector<QString> courseName;
 
     QString GetCourseName();
     double GetSum();

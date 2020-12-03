@@ -7,6 +7,7 @@ StudentStatus::StudentStatus()
     this->sex_ = "";
     this->math_ = 0;
     this->cProgram_ = 0;
+    this->coursescore_.clear();
     CalcValue();
 }
 
@@ -27,12 +28,26 @@ QString StudentStatus::GetSex(){return this->sex_;}
 double StudentStatus::GetMath(){return this->math_;}
 double StudentStatus::GetCProgram(){return this->cProgram_;}
 double StudentStatus::GetSum(){return this->sum_;}
+bool StudentStatus::GetCourseScore(const QString &courseName, double &courseScore)
+{
+    for (int i = 0; i < this->coursescore_.size(); ++i)
+    {
+        if (this->coursescore_[i].first == courseName)
+        {
+            courseScore = this->coursescore_[i].second;
+            return true;
+        }
+    }
+    return false;
+}
 
 void StudentStatus::SetID(const QString &id){this->id_ = id;}
 void StudentStatus::SetName(const QString &name){this->name_ = name;}
 void StudentStatus::SetSex(const QString &sex){this->sex_ = sex;}
 void StudentStatus::SetMath(double math){this->math_ = math;}
 void StudentStatus::SetCProgram(double cprogram){this->cProgram_ = cprogram;}
+void StudentStatus::SetCourseScore(const QVector<QPair<QString, double>> &courseScore){this->coursescore_ = courseScore;}
+void StudentStatus::AddCourseScore(const QString &courseName, const double courseScore){this->coursescore_.push_back({courseName, courseScore});}
 
 void StudentStatus::CalcValue()
 {

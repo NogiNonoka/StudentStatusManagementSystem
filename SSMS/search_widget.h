@@ -6,6 +6,8 @@
 #include <QFile>
 #include <QDebug>
 
+#include "course_info.h"
+
 namespace Ui {
 class SearchWidget;
 }
