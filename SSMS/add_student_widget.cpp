@@ -29,8 +29,8 @@ bool checkID(const int courseCnt, const QString &newID)
         }
     }
     QFile file("StudentStatus.txt");
-    file.open(QIODevice::WriteOnly|QIODevice::Text);
-    file.close();
+    if (!file.exists())
+        return true;
     file.open(QIODevice::ReadOnly|QIODevice::Text);
     if(!file.isOpen())
     {
