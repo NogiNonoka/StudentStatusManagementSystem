@@ -51,8 +51,8 @@ void SystemSettingsWidget::on_initButton_clicked()
     }
     file.close();
     QString cnt = ui->initEdit->text();
-    if (!checkNum(CourseInfo::courseCnt, cnt))
+    if (!checkNum(CourseSettings::courseCnt, cnt))
         return;
     QMessageBox::about(NULL, "反馈", "新建数据文件成功。");
-    CourseInfo::courseName.clear();
+    CourseSettings::courseName.clear();
 }

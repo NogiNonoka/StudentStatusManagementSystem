@@ -1,7 +1,7 @@
 #include "course_info.h"
 
-int CourseInfo::courseCnt = 0;
-QVector<QString> CourseInfo::courseName = QVector<QString>();
+int CourseSettings::courseCnt = 0;
+QVector<QString> CourseSettings::courseName = QVector<QString>();
 
 CourseInfo::CourseInfo()
 {

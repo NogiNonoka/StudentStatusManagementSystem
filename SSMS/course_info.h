@@ -4,14 +4,19 @@
 #include <QString>
 #include <QVector>
 
+namespace CourseSettings {
+    extern int courseCnt;
+    extern QVector<QString> courseName;
+}
+
 class CourseInfo
 {
 public:
     CourseInfo();
     CourseInfo(const QString &courseName);
 
-    static int courseCnt;
-    static QVector<QString> courseName;
+//    static int courseCnt;
+//    static QVector<QString> courseName;
 
     QString GetCourseName();
     double GetSum();

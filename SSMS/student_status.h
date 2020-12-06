@@ -18,22 +18,22 @@ public:
     double GetMath(); //abort
     double GetCProgram(); // abort
     double GetSum();
-    bool GetCourseScore(const QString &courseName, double &courseScore);
+    bool GetCourseScore(const QString &courseName, double &courseScore); // new
 
     void SetID(const QString &id);
     void SetName(const QString &name);
     void SetSex(const QString &sex);
     void SetMath(double math); // abort
     void SetCProgram(double cprogram); // abort
-    void SetCourseScore(const QVector<QPair<QString, double>> &courseScore);
-    void AddCourseScore(const QString &courseName, const double courseScore);
+    void SetCourseScore(const QVector<QPair<QString, double>> &courseScore); // new
+    void AddCourseScore(const QString &courseName, const double courseScore); // new
 
 private:
     QString id_;
     QString name_;
     QString sex_;
-    double math_;
-    double cProgram_;
+    double math_; // abort
+    double cProgram_; // abort
     double average_;
     double sum_;
 
