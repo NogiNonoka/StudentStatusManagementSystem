@@ -37,15 +37,15 @@ bool checkID(const int courseCnt, const QString &newID)
         QMessageBox::about(nullptr, "错误", "数据文件检查失败");
         return false;
     }
-    QTextStream inp(&file);
-    while(!inp.atEnd())
+    QTextStream fin(&file);
+    while(!fin.atEnd())
     {
         QString id, name, sex;
-        inp >> id >> name >> sex;
+        fin >> id >> name >> sex;
         for (int i = 0; i < courseCnt; ++i)
         {
             double tmp;
-            inp >> tmp;
+            fin >> tmp;
         }
         if (newID == id)
         {
@@ -69,21 +69,20 @@ void AddStudentWidget::on_addButton_clicked()
         QMessageBox::about(nullptr, "错误", "信息不完全。");
         return;
     }
-    const int courseCnt = 2;
     QString name = ui->nameEdit->text();
     QString id = ui->idEdit->text();
     QString sex = ui->sexEdit->text();
-    double score[courseCnt];
+    double score[CourseSettings::courseCnt];
     score[0] = ui->mathEdit->text().toDouble();
     score[1] = ui->cProgramEdit->text().toDouble();
-    if (!checkID(courseCnt, id))
+    if (!checkID(CourseSettings::courseCnt, id))
         return;
     if (sex != "男" && sex != "女")
     {
         QMessageBox::about(nullptr, "错误", "性别有效值为：男/女。");
         return;
     }
-    for (int i = 0; i < courseCnt; ++i)
+    for (int i = 0; i < CourseSettings::courseCnt; ++i)
     {
         if (score[i] < 0.0 || score[i] > 100.0)
         {
@@ -98,13 +97,13 @@ void AddStudentWidget::on_addButton_clicked()
         QMessageBox::about(NULL, "错误", "数据文件打开失败。");
         return;
     }
-    QTextStream out(&file);
-    out << id << " " <<  name << " " << sex;
-    for (int i = 0; i < courseCnt; ++i)
+    QTextStream fout(&file);
+    fout << id << " " <<  name << " " << sex;
+    for (int i = 0; i < CourseSettings::courseCnt; ++i)
     {
-        out << " " << score[i];
+        fout << " " << score[i];
     }
-    out << endl;
+    fout << endl;
     file.close();
     QMessageBox::about(NULL, "反馈", "学生信息添加成功。");
     ui->nameEdit->clear();

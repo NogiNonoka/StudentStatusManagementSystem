@@ -29,12 +29,12 @@ int SearchID(const int courseCnt, const QString &aimID)
         QMessageBox::about(nullptr, "错误", "数据文件打开失败。");
         return lineID;
     }
-    QTextStream inp(&file);
-    while(!inp.atEnd())
+    QTextStream fin(&file);
+    while(!fin.atEnd())
     {
         lineID++;
         QString id, name, sex;
-        inp >> id >> name >> sex;
+        fin >> id >> name >> sex;
         if (id == aimID)
         {
             file.close();
@@ -43,7 +43,7 @@ int SearchID(const int courseCnt, const QString &aimID)
         for (int i = 0; i < courseCnt; ++i)
         {
             double scoreTmp;
-            inp >> scoreTmp;
+            fin >> scoreTmp;
         }
     }
     QMessageBox::about(nullptr, "错误", "学生信息未找到。");
@@ -59,8 +59,8 @@ bool DeleteID(const int line)
         QMessageBox::about(nullptr, "错误", "数据文件打开失败。");
         return false;
     }
-    QTextStream inp(&file);
-    QString fileStr = inp.readAll();
+    QTextStream fin(&file);
+    QString fileStr = fin.readAll();
     int rmStartPos, rmEndPos;
     rmStartPos = 0;
     rmEndPos = 0;
@@ -106,26 +106,26 @@ void SearchWidget::on_searchButton_clicked()
         QMessageBox::about(nullptr, "错误", "数据文件打开失败。");
         return;
     }
-    QTextStream inp(&file);
+    QTextStream fin(&file);
     for (int i = 0; i < line; ++i)
     {
         QString id, name, sex;
-        inp >> id >> name >> sex;
+        fin >> id >> name >> sex;
         for (int i = 0; i < courseCnt; ++i)
         {
             double scoreTmp;
-            inp >> scoreTmp;
+            fin >> scoreTmp;
         }
     }
     QString id, name, sex;
-    inp >> id >> name >> sex;
+    fin >> id >> name >> sex;
     ui->idEdit->setText(id);
     ui->nameEdit->setText(name);
     ui->sexEdit->setText(sex);
     for (int i = 0; i < courseCnt; ++i)
     {
         double scoreTmp;
-        inp >> scoreTmp;
+        fin >> scoreTmp;
         if (i == 0)
             ui->mathEdit->setText(QString::number(scoreTmp));
         if (i == 1)

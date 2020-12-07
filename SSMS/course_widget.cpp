@@ -32,17 +32,17 @@ bool GetCourseInfo(int courseCnt, const QVector<QString> &courseName, QVector<Co
     {
        crs[i].SetCourseName(courseName[i]);
     }
-    QTextStream inp(&file);
-    while(!inp.atEnd())
+    QTextStream fin(&file);
+    while(!fin.atEnd())
     {
         QString id, name, sex;
-        inp >> id >> name >> sex;
+        fin >> id >> name >> sex;
         if (id == "" && name == "" && sex == "")
             break;
         for (int i = 0; i < courseCnt; ++i)
         {
             double score;
-            inp >> score;
+            fin >> score;
             crs[i].AddCourseScore(score);
         }
     }

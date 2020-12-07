@@ -33,12 +33,12 @@ bool InputStudentStatus(QVector<StudentStatus> &statusArray)
         QMessageBox::about(nullptr, "错误", "数据文件打开失败。");
         return false;
     }
-    QTextStream inp(&file);
-    while(!inp.atEnd())
+    QTextStream fin(&file);
+    while(!fin.atEnd())
     {
         QString id, name, sex;
         double math, cprogram;
-        inp >> id >> name >> sex >> math >> cprogram;
+        fin >> id >> name >> sex >> math >> cprogram;
         statusArray.push_back(StudentStatus(id, name, sex, math, cprogram));
     }
     statusArray.pop_back();
@@ -103,4 +103,5 @@ void BrowserWidget::on_clearButton_clicked()
         return;
     }
     file.close();
+    QMessageBox::about(nullptr, "反馈", "数据已成功清除。");
 }
