@@ -6,7 +6,8 @@ Semester 3 C++ Project
 
 -   项目名称 Project Name：学生学籍管理系统
 -   日期 Date：2020 - 11 - 26
--   编程语言 Language：C++
+-   编程语言 Language：C/C++
+-   开源协议：GNU GPL License
 
 ### 系统结构 System Architecture
 
@@ -14,11 +15,10 @@ Semester 3 C++ Project
 
 ##### 界面 User Interface
 
-### 准备工作
+### 准备工作 Preparation
 
 -   C++ (C++ Primer Plus / Modern Effective C++)
 -   Git (Use Github)
--   GNU GPL License
 -   IDE: QT 5.12.10 (QT Creator 4.13.1) Based on MinGW 7.3.0
 -   Guide: Google Style Guide
 
