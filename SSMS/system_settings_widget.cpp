@@ -18,7 +18,7 @@ void SystemSettingsWidget::on_returnButton_clicked()
     emit display(0);
 }
 
-bool checkNum(int &cnt, const QString &str)
+bool CheckNum(int &cnt, const QString &str)
 {
     if (str.isEmpty())
     {
@@ -51,7 +51,7 @@ void SystemSettingsWidget::on_initButton_clicked()
     }
     file.close();
     QString cnt = ui->initEdit->text();
-    if (!checkNum(CourseSettings::courseCnt, cnt))
+    if (!CheckNum(CourseSettings::courseCnt, cnt))
         return;
     QMessageBox::about(NULL, "反馈", "新建数据文件成功。");
     CourseSettings::courseName.clear();
