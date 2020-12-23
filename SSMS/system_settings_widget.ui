@@ -16,10 +16,10 @@
   <widget class="QPushButton" name="returnButton">
    <property name="geometry">
     <rect>
-     <x>700</x>
-     <y>560</y>
+     <x>690</x>
+     <y>550</y>
      <width>80</width>
-     <height>20</height>
+     <height>24</height>
     </rect>
    </property>
    <property name="text">
@@ -29,10 +29,10 @@
   <widget class="QLabel" name="title">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>110</y>
-     <width>239</width>
-     <height>24</height>
+     <x>248</x>
+     <y>100</y>
+     <width>307</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -48,10 +48,10 @@
   <widget class="QLabel" name="author">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>337</x>
      <y>150</y>
-     <width>102</width>
-     <height>12</height>
+     <width>128</width>
+     <height>15</height>
     </rect>
    </property>
    <property name="text">
@@ -61,8 +61,8 @@
   <widget class="QPushButton" name="initButton">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>250</y>
+     <x>340</x>
+     <y>320</y>
      <width>110</width>
      <height>31</height>
     </rect>
@@ -74,36 +74,60 @@
   <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>190</y>
-     <width>290</width>
-     <height>44</height>
+     <x>170</x>
+     <y>191</y>
+     <width>460</width>
+     <height>109</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-     <widget class="QLabel" name="text1">
-      <property name="font">
-       <font>
-        <family>Agency FB</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>支持插入、浏览、修改、删除学生信息；</string>
-      </property>
-     </widget>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="text1">
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>支持插入、浏览、修改、删除学生信息；</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="text2">
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>支持维护高等数学、程序设计课程信息；</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="text3">
+        <property name="font">
+         <font>
+          <family>Agency FB</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>中文字符编码：GB2313</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
-     <widget class="QLabel" name="text2">
-      <property name="font">
-       <font>
-        <family>Agency FB</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
+     <widget class="QLabel" name="text4">
       <property name="text">
-       <string>支持维护高等数学、程序设计课程信息；</string>
+       <string>数据库文本格式：学号 姓名 性别 成绩A 成绩B （行末应有换行符）</string>
       </property>
      </widget>
     </item>

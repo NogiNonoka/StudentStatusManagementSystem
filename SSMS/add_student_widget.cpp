@@ -18,7 +18,7 @@ void AddStudentWidget::on_returnButton_clicked()
     emit display(0);
 }
 
-bool checkID(const int courseCnt, const QString &newID)
+bool CheckID(const int courseCnt, const QString &newID)
 {
     for (int i = 0; i < newID.length(); ++i)
     {
@@ -76,7 +76,7 @@ void AddStudentWidget::on_addButton_clicked()
     double score[courseCnt];
     score[0] = ui->mathEdit->text().toDouble();
     score[1] = ui->cProgramEdit->text().toDouble();
-    if (!checkID(courseCnt, id))
+    if (!CheckID(courseCnt, id))
         return;
     if (sex != "男" && sex != "女")
     {

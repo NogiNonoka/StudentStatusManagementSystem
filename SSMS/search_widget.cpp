@@ -67,7 +67,7 @@ bool DeleteID(const int line)
     if (line == 0)
     {
         rmEndPos = fileStr.indexOf('\n', rmEndPos + 1);
-        fileStr.remove(rmStartPos, rmEndPos - rmStartPos);
+        fileStr.remove(rmStartPos, rmEndPos - rmStartPos + 1);
     }
     else
     {

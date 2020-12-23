@@ -54,7 +54,7 @@ bool GetCourseInfo(int courseCnt, const QVector<QString> &courseName, QVector<Co
     return true;
 }
 
-int searchCourse(const QString &courseName, QVector<CourseInfo> &course)
+int SearchCourse(const QString &courseName, QVector<CourseInfo> &course)
 {
     for (int i = 0; i < course.size(); ++i)
         if (courseName == course[i].GetCourseName())
@@ -77,7 +77,7 @@ void CourseWidget::on_courseBox_currentTextChanged(const QString &arg1)
     QVector<CourseInfo> course;
     if (!GetCourseInfo(courseCnt, courseName, course))
         return;
-    int pos = searchCourse(arg1, course);
+    int pos = SearchCourse(arg1, course);
     if (pos == -1)
     {
         QMessageBox::about(nullptr, "错误", "未找到该课程");

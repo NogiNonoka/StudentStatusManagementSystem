@@ -60,8 +60,8 @@
     <rect>
      <x>20</x>
      <y>50</y>
-     <width>224</width>
-     <height>24</height>
+     <width>250</width>
+     <height>26</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -131,10 +131,10 @@
   <widget class="QPushButton" name="clearButton">
    <property name="geometry">
     <rect>
-     <x>700</x>
+     <x>682</x>
      <y>53</y>
-     <width>81</width>
-     <height>21</height>
+     <width>99</width>
+     <height>24</height>
     </rect>
    </property>
    <property name="text">

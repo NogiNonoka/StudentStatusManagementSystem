@@ -70,7 +70,7 @@
   <widget class="QLabel" name="widgetLabel">
    <property name="geometry">
     <rect>
-     <x>370</x>
+     <x>365</x>
      <y>180</y>
      <width>79</width>
      <height>23</height>
@@ -89,10 +89,10 @@
   <widget class="QLabel" name="systemName">
    <property name="geometry">
     <rect>
-     <x>320</x>
+     <x>300</x>
      <y>140</y>
-     <width>168</width>
-     <height>24</height>
+     <width>216</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
