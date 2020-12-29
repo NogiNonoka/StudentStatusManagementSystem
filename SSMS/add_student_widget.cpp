@@ -73,9 +73,11 @@ void AddStudentWidget::on_addButton_clicked()
     QString name = ui->nameEdit->text();
     QString id = ui->idEdit->text();
     QString sex = ui->sexEdit->text();
-    double score[courseCnt];
-    score[0] = ui->mathEdit->text().toDouble();
-    score[1] = ui->cProgramEdit->text().toDouble();
+    QVector<double> score;
+    score.clear();
+//    for (int i = 0; i < courseCnt; ++i);
+    score.push_back(ui->mathEdit->text().toDouble());
+    score.push_back(ui->cProgramEdit->text().toDouble());
     if (!CheckID(courseCnt, id))
         return;
     if (sex != "男" && sex != "女")

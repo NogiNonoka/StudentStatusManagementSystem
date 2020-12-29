@@ -29,10 +29,10 @@
   <widget class="QLabel" name="title">
    <property name="geometry">
     <rect>
-     <x>248</x>
-     <y>100</y>
-     <width>307</width>
-     <height>31</height>
+     <x>280</x>
+     <y>120</y>
+     <width>239</width>
+     <height>24</height>
     </rect>
    </property>
    <property name="font">
@@ -48,10 +48,10 @@
   <widget class="QLabel" name="author">
    <property name="geometry">
     <rect>
-     <x>337</x>
+     <x>350</x>
      <y>150</y>
-     <width>128</width>
-     <height>15</height>
+     <width>102</width>
+     <height>12</height>
     </rect>
    </property>
    <property name="text">
@@ -71,7 +71,7 @@
     <string>初始化数据库</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>170</x>

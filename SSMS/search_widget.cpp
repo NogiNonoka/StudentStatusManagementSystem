@@ -15,6 +15,11 @@ SearchWidget::~SearchWidget()
 
 void SearchWidget::on_returnButton_clicked()
 {
+    ui->idEdit->clear();
+    ui->nameEdit->clear();
+    ui->sexEdit->clear();
+    ui->cProgramEdit->clear();
+    ui->mathEdit->clear();
     emit display(0);
 }
 

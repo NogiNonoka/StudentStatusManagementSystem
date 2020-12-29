@@ -32,8 +32,6 @@ private:
     double average_;
     double sum_;
 
-//    QVector<QPair<QString, double> > course_;
-
     void CalcValue();
 };
 #endif // STUDENTSTATUS_H
