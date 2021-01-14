@@ -13,6 +13,41 @@ Semester 3 C++ Project
 
 ##### 功能 Function
 
+```uml
+@startuml
+class StudentStatus
+{
+- private id_
+- private name_
+- private sex_
+- private math_
+- private cProgram_
+- private average_
+- private sum_
++ public Get()
++ public Set()
+- private CalcValue()
+}
+@enduml
+```
+
+```uml
+@startuml
+class CourseInfo
+{
+- private courseName_
+- private sum_
+- private average_
+- private totalNumber_
+- private passNumber_
+- private passRatio_
++ public Get()
++ public Set()
+- private CalcValue()
+}
+@enduml
+```
+
 ##### 界面 User Interface
 
 ### 准备工作 Preparation
